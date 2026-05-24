@@ -2,8 +2,8 @@
 #SBATCH --job-name=vllm_server_qwen2.5_72B        # Job name
 #SBATCH --output=job_%j.out         # Output file (%j = job ID)
 #SBATCH --error=job_%j.err          # Error file
-#SBATCH --partition=superpod-a100          # Partition/queue name
-#SBATCH --exclude=gpu016,gpu014          # Exclude specific nodes
+#SBATCH --partition=          # Partition/queue name
+#SBATCH --exclude=          # Exclude specific nodes
 #SBATCH --gres=gpu:a100:2           # Number of GPUs needed
 #SBATCH --nodes=1
 #SBATCH --mem=200g  # Requested Memory
@@ -17,14 +17,5 @@ conda activate debug
 export HF_HOME="./cache"
 
 echo "Running on host: $(hostname)"
-# python -m vllm.entrypoints.openai.api_server --model Qwen/Qwen2.5-32B-Instruct-AWQ --port 8001 --max-model-len 4096 --gpu-memory-utilization 0.95 --dtype bfloat16
-
-# python -m vllm.entrypoints.openai.api_server --model Qwen/Qwen2.5-72B-Instruct-AWQ --port 8001 --max-model-len 4096 --gpu-memory-utilization 0.95 --dtype bfloat16
-
-# python -m vllm.entrypoints.openai.api_server --model Qwen/Qwen2.5-14B-Instruct --port 8001 --max-model-len 4096 --gpu-memory-utilization 0.95 --dtype bfloat16
-
-# python -m vllm.entrypoints.openai.api_server --model Qwen/Qwen2.5-32B-Instruct --port 8001 --max-model-len 4096 --gpu-memory-utilization 0.95 --dtype bfloat16
-
-# python -m vllm.entrypoints.openai.api_server --model Qwen/Qwen2.5-7B-Instruct --port 8001 --max-model-len 4096 --gpu-memory-utilization 0.95 --dtype bfloat16
 
 python -m vllm.entrypoints.openai.api_server --model Qwen/Qwen2.5-72B-Instruct --port 8001 --max-model-len 4096 --gpu-memory-utilization 0.95 --dtype bfloat16 --tensor-parallel-size 2

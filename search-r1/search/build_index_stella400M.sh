@@ -2,7 +2,7 @@
 #SBATCH --job-name=build_index__stella400M       # Job name
 #SBATCH --output=job_%j.out         # Output file (%j = job ID)
 #SBATCH --error=job_%j.err          # Error file
-#SBATCH --partition=superpod-a100           # Partition/queue name
+#SBATCH --partition=           # Partition/queue name
 #SBATCH --gres=gpu:a100:4              # Number of GPUs needed
 #SBATCH --mem=800g  # Requested Memory
 #SBATCH --time 1-00:00:00  # Job time limit, 3 days
