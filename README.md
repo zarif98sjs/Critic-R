@@ -14,7 +14,7 @@ Agentic search systems iteratively interact with retrieval models to answer comp
 
 ## Installation
 
-Critic-R requires **Python 3.10+** and CUDA-capable GPUs. We recommend two separate conda environments — one for inference/serving and one for retriever training — to avoid `torch`/`vllm`/`faiss` version conflicts.
+Critic-R requires **Python 3.10+** and CUDA-capable GPUs. We recommend two separate conda environments — one for inference/serving and one for retriever training.
 
 ### 1. Inference / serving environment
 
