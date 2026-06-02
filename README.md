@@ -68,7 +68,7 @@ sbatch retrieval_launch__stella400M.sh                   # -> http://<host>:8000
 
 # (3) Run the Critic-R loop
 cd search-r1/inference_time_scaling
-bash sr1_inference_time_scaling.sh
+bash run.sh
 ```
 
 
