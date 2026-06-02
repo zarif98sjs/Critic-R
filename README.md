@@ -67,7 +67,7 @@ sbatch vllm_server_job_multigpu.sh                       # -> http://<host>:8001
 sbatch retrieval_launch__stella400M.sh                   # -> http://<host>:8000/retrieve
 
 # (3) Run the Critic-R loop
-cd search-r1/inference_time_scaling
+cd search-r1/critic-r
 bash run.sh
 ```
 
