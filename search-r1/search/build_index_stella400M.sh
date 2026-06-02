@@ -4,14 +4,14 @@
 #SBATCH --error=job_%j.err          # Error file
 #SBATCH --partition=           # Partition/queue name
 #SBATCH --gres=gpu:a100:4              # Number of GPUs needed
-#SBATCH --mem=800g  # Requested Memory
+#SBATCH --mem=200g  # Requested Memory
 #SBATCH --time 1-00:00:00  # Job time limit, 3 days
 
 source ../../../miniconda3/bin/activate
 conda activate retriever
 export HF_HOME="./cache"
 
-corpus_file=../../corpus/wiki-18.jsonl # jsonl
+corpus_file=../../corpus/wiki-18.jsonl # corpus file path
 save_dir=../../corpus
 retriever_name=stella_en_400M_v5 # this is for indexing naming
 retriever_model=../../../stella_en_400M_v5
