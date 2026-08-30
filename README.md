@@ -1,10 +1,15 @@
 # Critic-R: Improving Agentic Search using Instruction-tuned Retrievers with Natural Language Introspective Feedback
-
 <p align="center">
   <a href="https://arxiv.org/abs/2606.00590"><img alt="Paper" src="https://img.shields.io/badge/Paper-arXiv-b31b1b"></a>
   <a href="https://huggingface.co/zarif98sjs/Critic-Embed"><img alt="Model" src="https://img.shields.io/badge/%F0%9F%A4%97%20HuggingFace-Model-yellow"></a>
   <a href="https://github.com/zarif98sjs/Critic-R"><img alt="Code" src="https://img.shields.io/badge/%F0%9F%9A%80%20GitHub-Code-blue"></a>
 </p>
+
+## 📣 Latest News
+- **[Aug 21, 2026]**: 🔔 Our paper has been accepted to the **EMNLP 2026 (Findings)**!
+- **[June 2, 2026]**: 🚀 We released our full codebase and our retriever model **[🤗Critic-R](https://huggingface.co/zarif98sjs/Critic-Embed)**.
+
+
 
 ![Critic-R Framework Overview](Critic-R.png)
 
